@@ -52,3 +52,13 @@ RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 
 
+# 1. install rclone
+# see https://rclone.org/install/ for other install options
+$ curl https://rclone.org/install.sh | sudo bash
+
+# 2. create a new rclone remote with your favorite storage provider ☁️
+$ rclone config
+
+# 3. Encode your rclone config and copy to your clipboard
+$ cat $(rclone config file | sed -n 2p) | base64 --wrap=0 # Linux
+$ cat $(rclone config file | sed -n 2p) | base64 --b 0 # MacOS

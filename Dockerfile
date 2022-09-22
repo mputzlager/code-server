@@ -59,6 +59,6 @@ $ curl https://rclone.org/install.sh | sudo bash
 # 2. create a new rclone remote with your favorite storage provider ☁️
 $ rclone config
 
-# 3. Encode your rclone config and copy to your clipboard
+# 3. Encode your rclone config and copy to your clipboard5
 $ cat $(rclone config file | sed -n 2p) | base64 --wrap=0 # Linux
 $ cat $(rclone config file | sed -n 2p) | base64 --b 0 # MacOS
